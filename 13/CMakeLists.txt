@@ -8,10 +8,10 @@ set(my_list add_item add_item2 avg_price item_io) # depend on "Sales_item.h"
 foreach(f IN LISTS cpp)
     get_filename_component(target ${f} NAME_WE)
     if ("${target}" IN_LIST my_list)
-       add_executable("${target}_${dirname}" "${f}" "Sales_item.h")
+       add_executable("${target}" "${f}" "Sales_item.h")
     else()
-       add_executable("${target}_${dirname}" "${f}")
+       add_executable("${target}" "${f}")
     endif()
-    set_target_properties("${target}_${dirname}" PROPERTIES OUTPUT_NAME "${target}" FOLDER "${dirname}")
+    set_target_properties("${target}" PROPERTIES OUTPUT_NAME "${target}" FOLDER "${dirname}")
 endforeach()
 
