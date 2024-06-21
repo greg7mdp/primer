@@ -3,12 +3,12 @@ file(GLOB cpp "*.cpp")
 get_filename_component(dirname ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 string(REPLACE " " "_" dirname ${dirname})
 
-set(my_list add_item add_item2 avg_price item_io) # depend on "Sales_item.h"
+set(my_list add_item_ch7  avg_price_ch7) # depend on "Sales_data.h"
 
 foreach(f IN LISTS cpp)
     get_filename_component(target ${f} NAME_WE)
     if ("${target}" IN_LIST my_list)
-       add_executable("${target}" "${f}" "Sales_item.h")
+       add_executable("${target}" "${f}" "Sales_data.h")
     else()
        add_executable("${target}" "${f}")
     endif()
