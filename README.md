@@ -6,7 +6,7 @@ For all information about the original distribution, see [Visual Studio 2012 REA
 
 ## Instruction for using this repo to create a Visual Studio solution
 
-- install Visual Studio 2022 or above (community edition is fine)
+- install Visual Studio (community edition is fine). I used 2022 but older versions are most likely fine.
 - install [git](https://git-scm.com/download/win).  Probably the `64-bit Git for Windows Setup` is best.
 - install [cmake](https://cmake.org/download/). Probably the `Windows x64 installer` is best.
 - start a `x64 Native Tool Command Prompt` (this is a program in Visual Studio).
