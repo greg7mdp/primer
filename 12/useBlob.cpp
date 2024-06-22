@@ -46,7 +46,7 @@ int main()
 {
 	StrBlob b1; 
 	{
-#ifdef INIT_LIST
+#ifdef LIST_INIT
 	    StrBlob b2 = { "a", "an", "the" };
 #else
 		string temp[] = { "a", "an", "the" };

@@ -70,11 +70,24 @@ VARIADICS                 variadic templates
 */
 #endif  // ends compiler version check
 
-#ifndef LROUND
-inline long lround(double d)
-{
-    return (d >= 0) ?  long(d + 0.5) : long(d - 0.5);
-}
+#if __cplusplus == 201103L
+
+#define CONSTEXPR_VARS
+#define CONSTEXPR_FCNS
+#define CONSTEXPR_CTORS
+#define DEFAULT_FCNS
+#define DELETED_FCNS
+#define FUNC_CPP
+#define FUNCTION_PTRMEM
+#define IN_CLASS_INITS
+#define INITIALIZER_LIST
+#define LIST_INIT
+#define LROUND
+#define NOEXCEPT
+#define TEMPLATE_FCN_DEFAULT_ARGS
+#define UNION_CLASS_MEMS
+#define VARIADICS
+
 #endif
 
 #endif  // ends header guard
